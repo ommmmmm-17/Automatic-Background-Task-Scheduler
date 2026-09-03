@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light dark; }
+
+html, body, #root { height: 100%; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  @apply bg-slate-50 text-slate-900 dark:bg-[#0b1020] dark:text-slate-100;
+  transition: background-color .35s ease, color .35s ease;
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-white/[0.04] backdrop-blur-xl border border-slate-200/70 dark:border-white/10;
+}
+
+.btn { @apply inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium transition active:scale-[0.98]; }
+.btn-primary { @apply btn bg-brand-600 hover:bg-brand-700 text-white shadow-glow; }
+.btn-ghost { @apply btn hover:bg-slate-200/70 dark:hover:bg-white/10; }
+.btn-danger { @apply btn bg-rose-500/90 hover:bg-rose-600 text-white; }
+
+.chip { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-white/10 rounded-full; }
